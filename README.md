@@ -1,42 +1,93 @@
-WPF Login Form Documentation
-Overview
-This project is a part of a learning process, designed to implement a basic login form using WPF (Windows Presentation Foundation) with the MVVM (Model-View-ViewModel) design pattern in C#. It includes user authentication, navigation between views, and basic user management (add, edit, remove users) using a SQL Server database. The application is not a complete product but serves as a foundation for further development.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WPF Login Form Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        h1, h2 {
+            color: #026495;
+        }
+        h2 {
+            border-bottom: 2px solid #026495;
+            padding-bottom: 6px;
+        }
+        p, ul, li {
+            line-height: 1.6;
+        }
+        code {
+            background-color: #eaeaea;
+            padding: 2px 4px;
+            font-family: monospace;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WPF Login Form Documentation</h1>
 
-Project Structure
-The project is structured following the MVVM pattern, enhancing maintainability, and separating the user interface from the logic. Here’s a breakdown of the main components:
+        <h2>Overview</h2>
+        <p>This project is an educational endeavor, aiming to create a basic login form utilizing the Windows Presentation Foundation (WPF) framework with adherence to the Model-View-ViewModel (MVVM) architectural pattern in C#. It includes functionalities such as user authentication, view navigation, and a basic user management system through a SQL Server database backend. This project serves as a foundation for future development and refinement.</p>
 
-Models: Represents the data structure of the application.
+        <h2>Project Structure</h2>
+        <h3>Models</h3>
+        <ul>
+            <li><code>Customer</code>: Basic structure for customer information.</li>
+            <li><code>UserModel</code>: Schema for user credentials and personal details.</li>
+            <li><code>UserAccountModel</code>: Information related to the user's account.</li>
+        </ul>
 
-Customer: Basic model for customer information.
-UserModel: Defines the structure for user information including username, password, and personal details.
-UserAccountModel: Contains user's account details.
-ViewModels: Acts as a mediator between the Models and Views, containing the logic for the user interface.
+        <h3>ViewModels</h3>
+        <ul>
+            <li><code>LoginViewModel</code>: Manages the authentication logic.</li>
+            <li><code>MainViewModel</code>: Controls the main application window and navigation.</li>
+            <li><code>CustomerViewModel</code>: Handles customer information management.</li>
+        </ul>
 
-LoginViewModel: Manages the login logic.
-MainViewModel: Handles the main window's logic and navigations.
-CustomerViewModel: Manages customer-related functionalities.
-Views: The user interface of the application.
+        <h3>Views</h3>
+        <ul>
+            <li><code>LoginView</code>: Initial login interface.</li>
+            <li><code>MainView</code>: Primary application window post-authentication.</li>
+            <li><code>CustomerView</code>: Displays and manages customer information.</li>
+        </ul>
 
-LoginView: The login screen.
-MainView: The main window after login.
-CustomerView: Displays customer information.
-Repositories: Provides methods to interact with the database.
+        <h3>Repositories</h3>
+        <p><code>UserRepository</code>: Implements the <code>IUserRepository</code> interface, offering methods for user authentication and CRUD operations.</p>
 
-UserRepository: Implements IUserRepository, providing methods for user authentication and CRUD operations.
-CustomControls: Contains customized WPF controls.
+        <h3>CustomControls</h3>
+        <p><code>BindablePasswordBox</code>: A custom control that supports data binding.</p>
 
-BindablePasswordBox: A custom password box that supports data binding.
-Installation
-Database Setup: Create a SQL Server database named MVVMLoginDb and execute the provided SQL script to create the necessary tables.
-Environment Variables: Set the DB_USER and DB_PASSWORD environment variables to your database username and password.
-Project Configuration: Open the solution in Visual Studio. Ensure all NuGet packages are restored and build the solution.
-Running the Application: Start the application from Visual Studio by pressing F5 or clicking the "Start" button.
-Usage
-Login: Use the login form to enter the application. The default username and password are provided in the database script.
-Main Window: Navigate through the application using the sidebar menu.
-Adding Customers: Navigate to the "Customers" view from the sidebar menu and use the "Add" button.
-Contributing
-This project is open for contributions. Whether you are looking to fix bugs, improve the functionality, or extend the features, your contributions are welcome. Please feel free to fork the repository and submit pull requests.
+        <h2>Installation & Setup</h2>
+        <ol>
+            <li>Database Preparation: Establish a SQL Server database named <code>MVVMLoginDb</code> and execute the provided SQL script.</li>
+            <li>Environment Configuration: Set <code>DB_USER</code> and <code>DB_PASSWORD</code> environment variables.</li>
+            <li>Project Setup: Open the solution in Visual Studio, restore NuGet packages, and build the project.</li>
+            <li>Application Launch: Start the application via Visual Studio.</li>
+        </ol>
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+        <h2>Usage</h2>
+        <p>Authenticate using the login screen, navigate through the application, and manage customer information via the "Customers" view.</p>
+
+        <h2>Contributing</h2>
+        <p>Contributions are welcome. Feel free to fork the repository, make improvements, and submit pull requests.</p>
+
+        <h2>License</h2>
+        <p>This project is licensed under the MIT License. See the <code>LICENSE</code> file for more details.</p>
+    </div>
+</body>
+</html>
